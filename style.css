@@ -75,3 +75,26 @@ button:active {
     color: green;
     text-align: start;
 }
+
+/* task 3 text  */
+
+.task3 {
+    font-size: 140px;
+    letter-spacing: 20px;
+    text-align: center;
+    color: red;
+    animation-name: lightup;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes lightup {
+    50% {
+        color: red;
+    }
+
+    100% {
+        color: black;
+    }
+}
