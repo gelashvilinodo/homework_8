@@ -71,6 +71,7 @@ button:active {
     font-size: 20px;
     color: green;
     text-align: start;
+    margin-top: 15px;
 }
 
 /* task 3 text  */
@@ -99,35 +100,50 @@ button:active {
 
 /* task 4 spinner */
 
-.spinnerdiv {
-    margin: auto;
+.spinnercontainer {
     width: 300px;
     height: 300px;
-    border-radius: 50%;
-    border-top: 45px solid green;
-    border-right: 45px solid green;
-    border-bottom: 45px solid yellow;
-    border-left: 45px solid red;
-    animation: spinner 2s linear infinite;
+    margin: auto;
     display: flex;
     position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.actuallyspinnerdiv {
+    border-top: 20px solid red;
+    border-right: 20px solid red;
+    border-bottom: 20px solid yellow;
+    border-left: 20px solid green;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    animation-name: spinner;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
 }
 
 @keyframes spinner {
-    0% {
-        transform: rotate(0deg);
+    from {
+        transform: rotate(0);
     }
 
-    100% {
+    to {
         transform: rotate(360deg);
     }
 }
 
-.spinnerdiv:hover {
+.actuallyspinnerdiv:hover {
     animation-play-state: paused;
 }
 
-     /* უძრავი ტექსტი ვერ მოვიფიქრე როგორ ჩამესვა :( */
+.spinnertext {
+    position: absolute;
+    font-size: 30px;
+    color: green;
+}
 
 /* task 5 header  */
 
