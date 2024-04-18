@@ -3,6 +3,14 @@
     margin: auto;
 }
 
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
 /* 1 button  */
 
 .buttoncard {
@@ -42,7 +50,6 @@ button:active {
 
 .photoarticle {
     padding: 35px;
-    background-color: rgb(255, 248, 248);
     transition-property: all;
     transition-duration: 1s;
 }
@@ -125,4 +132,32 @@ button:active {
 
 .spinnerdiv:hover {
     animation-play-state: paused;
+}
+
+/* task 5 header  */
+
+.glowheader{
+    margin-block: 100px;
+    padding: 30px 200px;
+    background-color: rgb(5, 91, 70);
+}
+
+.glowul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.glowtext{
+    font-size: 40px;
+    color: antiquewhite;
+    text-shadow: 3px 3px 4px black;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.glowtext:hover{
+    text-shadow: 0 0 5px rgb(253, 84, 188),
+    0 0 20px rgb(253, 84, 188),
+    0 0 50px rgb(253, 84, 188),
+    0 0 100px rgb(253, 84, 188);
 }
