@@ -3,14 +3,6 @@
     margin: auto;
 }
 
-a{
-    text-decoration: none;
-}
-
-li{
-    list-style: none;
-}
-
 /* 1 button  */
 
 .buttoncard {
@@ -83,15 +75,16 @@ button:active {
 
 /* task 3 text  */
 
+.task3div {
+    margin-block: 100px;
+}
+
 .task3 {
     font-size: 140px;
     letter-spacing: 20px;
     text-align: center;
     color: red;
-    animation-name: lightup;
-    animation-duration: .5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: lightup .5s linear infinite;
 }
 
 @keyframes lightup {
@@ -134,20 +127,22 @@ button:active {
     animation-play-state: paused;
 }
 
+     /* უძრავი ტექსტი ვერ მოვიფიქრე როგორ ჩამესვა :( */
+
 /* task 5 header  */
 
-.glowheader{
-    margin-block: 100px;
+.glowheader {
+    margin-top: 100px;
     padding: 30px 200px;
     background-color: rgb(5, 91, 70);
 }
 
-.glowul{
+.glowul {
     display: flex;
     justify-content: space-between;
 }
 
-.glowtext{
+.glowtext {
     font-size: 40px;
     color: antiquewhite;
     text-shadow: 3px 3px 4px black;
@@ -155,9 +150,80 @@ button:active {
     transition-duration: 1s;
 }
 
-.glowtext:hover{
+.glowtext:hover {
     text-shadow: 0 0 5px rgb(253, 84, 188),
-    0 0 20px rgb(253, 84, 188),
-    0 0 50px rgb(253, 84, 188),
-    0 0 100px rgb(253, 84, 188);
+        0 0 20px rgb(253, 84, 188),
+        0 0 50px rgb(253, 84, 188),
+        0 0 100px rgb(253, 84, 188);
+}
+
+/* task 6 loading bar  */
+
+.loadingsection {
+    background-color: black;
+    margin: auto;
+    padding: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.loadingarticle {
+    width: 550px;
+}
+
+.beforecomplete {
+    color: white;
+    animation: beforecomplete 1s linear 5 forwards;
+}
+
+@keyframes beforecomplete {
+    50% {
+        color: white;
+    }
+
+    100% {
+        color: black;
+    }
+}
+
+.divframe {
+    width: 550px;
+    height: 30px;
+    border: 3px solid white;
+    margin-block: 5px;
+    padding: 2px;
+}
+
+.loadingbar {
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation: loadingbar 5s linear;
+}
+
+@keyframes loadingbar {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.aftercomplete {
+    color: black;
+    text-align: right;
+    animation: completedtext linear 1 forwards;
+    animation-delay: 5s;
+}
+
+@keyframes completedtext {
+    from {
+        color: black;
+    }
+
+    to {
+        color: white;
+    }
 }
