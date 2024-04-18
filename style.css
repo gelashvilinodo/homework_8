@@ -1,7 +1,6 @@
 .container {
     width: min(100%, 1440px);
     margin: auto;
-
 }
 
 /* 1 button  */
@@ -10,7 +9,6 @@
     padding: 70px;
     display: flex;
     column-gap: 100px;
-    background-color: aqua;
 }
 
 .buttondiv {
@@ -97,4 +95,34 @@ button:active {
     100% {
         color: black;
     }
+}
+
+/* task 4 spinner */
+
+.spinnerdiv {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border-top: 45px solid green;
+    border-right: 45px solid green;
+    border-bottom: 45px solid yellow;
+    border-left: 45px solid red;
+    animation: spinner 2s linear infinite;
+    display: flex;
+    position: relative;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinnerdiv:hover {
+    animation-play-state: paused;
 }
